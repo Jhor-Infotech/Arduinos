@@ -1,1 +1,0 @@
-Neste diretório há dois códigos para medidores de corrente, potência e consumo de energia elétrica de uma carga aplicada a um circuito AC. Um é dotado de captação/medição automática da tensão do circuito; o outro deverá ter o valor de tensão definido como uma constante para os cálculos das corrente, potência e consumo de energia da carga aplicada ao circuito AC.
