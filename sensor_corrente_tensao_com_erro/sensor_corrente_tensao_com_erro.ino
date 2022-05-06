@@ -1,14 +1,14 @@
-#### UNIVESP 
+// #### UNIVESP 
 
-#### ENG. DA COMPUTAÇÃO 
+// #### ENG. DA COMPUTAÇÃO 
 
-#### PROJETO INTEGRADOR V 
+// #### PROJETO INTEGRADOR V 
 
-#### POLO JUQUITIBA
+// #### POLO JUQUITIBA
 
-#### SENSOR DE TENSÃO E CORRENTE EM CIRCUITO AC
+// #### SENSOR DE TENSÃO E CORRENTE EM CIRCUITO AC
 
-#### (APERFEIÇOAMENTO DO PI5)
+// #### (APERFEIÇOAMENTO DO PI5)
 
 
 
@@ -20,7 +20,8 @@ int sensorTensao = A0;                  // Variável que receberá o sinal anal�
 float valorTensao;                      // Variável que receberá o valor lido na porta analógica A0 do Arduino
 int tensaoFinal = 0;                    // Variável que receberá a tensão final convertida em volts AC
 
-int sensorCorrente = A1;                // variável que receberá o sinal analógico da porta A1 do Arduino com a CORRENTE do circuito           
+//int sensorCorrente = A1;                // variável que receberá o sinal analógico da porta A1 do Arduino com a CORRENTE do circuito
+int sensorCorrente = 0;                // variável que receberá o sinal analógico da porta A1 do Arduino com a CORRENTE do circuito           
 int sensorValue_aux = 0;                //
 float valorSensor = 0;                  //
 float valorCorrente = 0;                //
@@ -55,17 +56,13 @@ long calculos(){
         //SE VARIÁVEL FOR MAIOR QUE 100 E MENOR QUE 483 FAZ
         if ((valorTensao > 127) & (valorTensao < 483)) { 
         // ORIGINALMENTE, O PARÂMETRO "valorTensao" é multiplicado por 5. Mas multipliquei por 10 para chegar à tensão medida pelo multímetro
-        tensaoFinal = ((valorTensao*10)/1023)77.3;       / VARIÁVEL RECEBE O VALOR GERADO PELA CONTA
-                                                            (O VALOR 77.3 PODE/DEVE SER ALTERADO PARA FINS DE AJUSTE DO VALOR DE TENSÃO)
-                                                         */ 
+        tensaoFinal = ((valorTensao*10)/1023)77.3;       // VARIÁVEL RECEBE O VALOR GERADO PELA CONTA
+                                                           // (O VALOR 77.3 PODE/DEVE SER ALTERADO PARA FINS DE AJUSTE DO VALOR DE TENSÃO)
+                                                         
         }
-              //BLOCO REFERNETE A TENSÃO DE 220V
+              //BLOCO REFERENTE A TENSÃO DE 220V
         //SE VARIÁVEL FOR MAIOR QUE 665 E MENOR QUE 1023 FAZ 
-        if ((valorTensao > 665) & (valorTensao < 1023)) {  
-        tensaoFinal = ((valorTensao*5)/1023)57;          / VARIÁVEL RECEBE O VALOR GERADO PELA CONTA
-                                                            (O VALOR 57 PODE/DEVE SER ALTERADO PARA FINS DE AJUSTE DO VALOR DE TENSÃO) 
-                                                           */
-        }
+        if ((valorTensao > 665) & (valorTensao < 1023)) { tensaoFinal = ((valorTensao*5)/1023)57;          /* VARIÁVEL RECEBE O VALOR GERADO PELA CONTA(O VALOR 57 PODE/DEVE SER ALTERADO PARA FINS DE AJUSTE DO VALOR DE TENSÃO) */}
     
         //BLOCO REFERENTE AOS CÁLCULOS DA MEDIÇÃO DA CORRENTE DO CIRCUITO  
   for(int i=10000; i>0; i--){    

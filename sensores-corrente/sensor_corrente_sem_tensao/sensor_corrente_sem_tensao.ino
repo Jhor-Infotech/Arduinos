@@ -73,32 +73,32 @@ long calculos(){
                         delay(2000);                         // Determinando o tempo de exibição da apresnetação em milissegundos  
                       }
 
-                      long exibir_tensao_corrente(){
-                        lcd.clear();  
-                        lcd.setCursor(2,0);
-                        lcd.print("Tensao_circuito:");
-                        lcd.setCursor(7,1);
-                        lcd.print(tensao);
-                        lcd.print(" V");
-                        lcd.setCursor(1,2);
-                        lcd.print ("Corrente_circuito:");
-                        lcd.setCursor(6,3);
-                        lcd.print(valorCorrente, 3);
-                        lcd.print("A");
-                        delay(2000);                      
-                      }
-    
-                      long exibir_potencia_consumo(){                         
-                        lcd.clear();
-                        lcd.setCursor(1,0);
-                        lcd.print("Potencia da carga:");
-                        lcd.setCursor(3,1);
-                        lcd.print (tensao*valorCorrente);
-                        lcd.print(" Watts");
-                        lcd.setCursor(2,2);        
-                        lcd.print("Consumo_energia");
-                        lcd.setCursor(3,3);
-                        lcd.print(energia, 3); // "3" é a quantidade de casa decimais
-                        lcd.print (" kj");
-                        delay(2000);                        
-                      }
+                        long exibir_tensao_corrente(){
+                    lcd.clear();  
+                    lcd.setCursor(2,0);
+                    lcd.print("Tensao_circuito:");
+                    lcd.setCursor(7,1);
+                    lcd.print(tensao);
+                    lcd.print(" V");
+                    lcd.setCursor(1,2);
+                    lcd.print ("Corrente_circuito:");
+                    lcd.setCursor(6,3);
+                    lcd.print(valorCorrente, 3);
+                    lcd.print("A");
+                    delay(2000);                      
+                  }
+
+                  long exibir_potencia_consumo(){                         
+                    lcd.clear();
+                    lcd.setCursor(1,0);
+                    lcd.print("Potencia da carga:");
+                    lcd.setCursor(3,1);
+                    lcd.print (tensao*valorCorrente);
+                    lcd.print(" Watts");
+                    lcd.setCursor(2,2);        
+                    lcd.print("Consumo_energia");
+                    lcd.setCursor(3,3);
+                    lcd.print(energia, 3); // "3" é a quantidade de casa decimais
+                    lcd.print (" kj");
+                    delay(2000);                        
+                  }
